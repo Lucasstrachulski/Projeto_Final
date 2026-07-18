@@ -4,24 +4,24 @@ const AlunoSchema = new mongoose.Schema(
   {
     nome: {
       type: String,
-      requeride: [true, "O nome é obrigatório"],
+      required: [true, "O nome é obrigatório"],
     },
     email: {
       type: String,
-      requeride: [true, "O email é obrigatório"],
+      required: [true, "O email é obrigatório"],
       unique: true,
       lowercase: true,
       trim: true,
       match: [/^\S+@\S+\.\S+$/, "Email inválido."],
     },
     cpf: {
-      type: Number,
-      requeride: [true, "O CPF é obrigatório"],
+      type: String,
+      required: [true, "O CPF é obrigatório"],
       match: [/^\d{11}$/,"CPF inválido. Insira apenas os 11 dígitos numéricos."],
     },
     SenhaHash: {
       type: String,
-      requeride: [true, "A senha é obrigatória"],
+      required: [true, "A senha é obrigatória"],
       select: false,
     },
   },
