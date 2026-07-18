@@ -19,7 +19,7 @@ const AlunoSchema = new mongoose.Schema(
       required: [true, "O CPF é obrigatório"],
       match: [/^\d{11}$/,"CPF inválido. Insira apenas os 11 dígitos numéricos."],
     },
-    SenhaHash: {
+    senhaHash: {
       type: String,
       required: [true, "A senha é obrigatória"],
       select: false,
