@@ -23,7 +23,7 @@ const ProfessorSchema = new mongoose.Schema(
       type: String,
       required: [true, "A senha é obrigatória!"],
       select: false,
-    },
+    }
   },
   {
     timestamps: true,
