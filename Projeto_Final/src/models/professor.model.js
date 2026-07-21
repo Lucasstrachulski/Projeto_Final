@@ -4,7 +4,7 @@ const ProfessorSchema = new mongoose.Schema(
   {
     nome: {
       type: String,
-      required: [true, "O nome é obrogatório."],
+      required: [true, "O nome é obrigatório."],
     },
     email: {
       type: String,
